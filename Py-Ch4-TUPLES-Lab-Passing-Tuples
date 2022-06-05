@@ -1,0 +1,36 @@
+# Python TUPLES Lab - Arguments
+print('''
+Python Tuples - Tuples are used to pass argument 
+values back and forth from functions.
+
+Challenge #1
+- Run this code. See how you pass 3 arguments as a 
+  tuple, get 2 arguments returned as a tuple, but 
+  assigned to variables Sum and Avg which are 
+  type<int> and <float>
+
+- See that the type(sum_and_avg(3, 8, 5)) of the 
+  function is <tuple>
+      
+- Update the function to pass a tuple of random 
+  length set of numbers, and then return the 
+  same 2 values in a tuple      
+   ''')
+
+def sum_and_avg(local_tup_set):
+  x=len(local_tup_set)
+  s=0
+  for i in local_tup_set:
+    print(i)
+    s = s + i
+  a = s/x
+  return(s, a)
+# see that the type( of the function is <tuple>)
+#tup_set = (1,2,3,4,5,6,7,8,9,)
+tup_set = (2,2,2,2,)  
+print(type(sum_and_avg(tup_set)))
+(Sum, Avg) = sum_and_avg(tup_set)
+print('Sum =', Sum)
+print(type(Sum))
+print('Avg =', Avg)
+print(type(Avg))
